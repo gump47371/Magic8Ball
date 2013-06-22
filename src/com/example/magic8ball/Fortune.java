@@ -9,10 +9,12 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class Fortune extends ListActivity implements OnClickListener {
 
 	Button fate;
+	TextView reveal;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -33,13 +35,14 @@ public class Fortune extends ListActivity implements OnClickListener {
 	private void shaken() {
 		
 		fate = (Button) findViewById(R.id.button1);
-		
+		reveal = (TextView) findViewById(R.id.display);
 	}
 	
 	public void onClick(View view) {
 		
 		
-		String[] array = context.getResources().getStringArray(R.array.answers);
+		String[] array = getResources().getStringArray(R.array.answers);
 		String randomStr = array[new Random().nextInt(array.length)];
+		reveal.setText(randomStr);
 	}
 }
