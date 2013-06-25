@@ -8,12 +8,14 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class Fortune extends Activity implements OnClickListener {
 
 	Button fate;
 	TextView reveal;
+	EditText clear;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,18 +25,19 @@ public class Fortune extends Activity implements OnClickListener {
 		fate.setOnClickListener(this);
 	}
 
-	@Override
+	/*@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.fortune, menu);
 		return true;
 		
-	} 
+	} */
 	
 	private void shaken() {
 		
 		fate = (Button) findViewById(R.id.button1);
 		reveal = (TextView) findViewById(R.id.display);
+		clear = (EditText) findViewById(R.id.editText1);
 	}
 	
 	public void onClick(View view) {
@@ -43,5 +46,6 @@ public class Fortune extends Activity implements OnClickListener {
 		String[] array = getResources().getStringArray(R.array.answers);
 		String randomStr = array[new Random().nextInt(array.length)];
 		reveal.setText(randomStr);
+		clear.setText("");
 	}
 }
