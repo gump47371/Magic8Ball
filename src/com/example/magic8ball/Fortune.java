@@ -4,14 +4,13 @@ import java.util.Random;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.app.ListActivity;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Fortune extends ListActivity implements OnClickListener {
+public class Fortune extends Activity implements OnClickListener {
 
 	Button fate;
 	TextView reveal;
@@ -30,7 +29,7 @@ public class Fortune extends ListActivity implements OnClickListener {
 		getMenuInflater().inflate(R.menu.fortune, menu);
 		return true;
 		
-	}
+	} 
 	
 	private void shaken() {
 		

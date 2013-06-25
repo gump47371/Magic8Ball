@@ -9,7 +9,7 @@ package com.example.magic8ball;
 
 public final class R {
     public static final class array {
-        public static final int answers-array=0x7f040000;
+        public static final int answers=0x7f040000;
     }
     public static final class attr {
     }

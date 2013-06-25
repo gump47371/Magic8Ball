@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string-array name="answers-array">
+    <string-array name="answers">
         <item>It is certain</item>
         <item>It is decidedly so</item>
         <item>Without a doubt</item>
